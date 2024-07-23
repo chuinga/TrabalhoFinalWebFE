@@ -2,26 +2,3 @@ body {
     margin: 0;
 }
 
-.navbar {
-    display:flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #b25055;
-}
-
-.navbar .logo {
-    width: 20%;
-    height: 15%;
-}
-
-.navbar .languages {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;    
-    width: 100px;
-}
-
-.navbar .languages img {
-    width: 60%;
-    margin: 5px;
-}

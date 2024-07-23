@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/styles/base.css">
+    <link rel="stylesheet" type="text/css" href="/styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/navbar.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -33,25 +34,31 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/pages/arrabida.html">Arrábida</a></li>
-        <li><a href="/pages/beaches.html">Beaches</a></li>
-        <li><a href="/pages/gastronomy.html">Gastronomy</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-      </ul>
-    </nav>
-    <img class="logo" src="/assets/images/logo.png" alt="Logo">
-    <div class="languages">
-      <a href="/index.html"><img src="/assets/icons/en.png" alt="English"></a>
-      <a href="/index.html"><img src="/assets/icons/pt.png" alt="Portuguese"></a>
-    </div>
-    </div>
+    <nav class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▼</button>
+        <div class="dropdown-content">
+          <a href="/pages/arrabida.html">Arrábida</a>
+          <a href="/pages/beaches.html">Beaches</a>
+          <a href="/pages/gastronomy.html">Gastronomy</a>
+          <a href="/pages/contact.html">Contact</a>
+          <a href="/pages/about.html">About</a>
+        </div>
+      </div>
+      <a href="/index.html">
+        <img class="logo" src="/assets/images/logo.png" alt="Logo" />
+      </a>
 
-    
+      <div class="languages">
+        <a href="/index.html"
+          ><img src="/assets/icons/en.png" alt="English"
+        /></a>
+        <a href="/index.html"
+          ><img src="/assets/icons/pt.png" alt="Portuguese"
+        /></a>
+      </div>
+    </nav>
+
     <main>
       <section>
         <h2>Setúbal</h2>
