@@ -1,17 +1,22 @@
 footer {
-    background-color: #86b0e2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    align-items: center;
-    height: 150px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  background-color: #86b0e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding-top: 20px;
 }
 
 footer p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .social img {
-    width: 30px;
-    margin: 4px;
+  width: 30px;
+  margin: 4px;
 }
