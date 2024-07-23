@@ -1,0 +1,17 @@
+footer {
+    background-color: #86b0e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    height: 150px;
+}
+
+footer p {
+    font-size: 1.5em;
+}
+
+.social img {
+    width: 30px;
+    margin: 4px;
+}
