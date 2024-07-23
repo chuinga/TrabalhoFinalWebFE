@@ -8,3 +8,70 @@ iframe {
     height: 500px;
     margin-bottom: 50px;
 }
+
+.intro {    
+    margin-bottom: 50px;
+}
+
+.imgToLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imgToRight {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.arco {
+    width: 40%;
+}
+
+.description {
+    width: 60%;
+    margin-right: 20px;
+}
+
+section {
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    /*intervalo entre as colunas*/
+  }
+  
+  @media screen and (min-width: 992px) {
+    section {
+      grid-template-columns: auto auto auto;
+    }
+  }
+  
+  article {
+    background: #edecff;
+    padding: 20px;
+    border-bottom: 4px solid #86b0e2;
+    text-align: center;
+  }
+  
+  article span {
+    font-size: 40pt;
+    font-weight: bold;
+  }
+  
+  article p {
+    margin: 0;
+    font-size: 20pt;
+  }
+  
+  .de {
+    font-size: 20pt;
+  }
+
+.textToRight {
+    text-align: right;
+    font-size: xx-large;
+}
