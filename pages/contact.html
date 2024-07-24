@@ -63,6 +63,89 @@
     <main>
       <section>
         <h2>Contact</h2>
+        <div class="container">
+          <form id="formpokemons" onsubmit="enviarDados(event)">
+            <div class="row">
+              <div class="col-25">
+                <label for="pokename">Name</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="pokename"
+                  name="pokename"
+                  placeholder="Nome do Pokémon"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="pokename">Email Address</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="email"
+                  id="pokename"
+                  name="pokename"
+                  placeholder="Nome do Pokémon"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="pokename">Phone Number (optional)</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="pokename"
+                  name="pokename"
+                  placeholder="Place your phone number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="tipopokemon">Reason for Contact</label>
+              </div>
+              <div class="col-75">
+                <select id="tipopokemon" name="tipopokemon">
+                  <option value="none"></option>
+                  <option value="support">Support</option>
+                  <option value="issue">Issue</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="origemnome">Message</label>
+              </div>
+              <div class="col-75">
+                <textarea
+                  id="origemnome"
+                  name="origemnome"
+                  placeholder="Origem do nome do Pokémon"
+                  style="height: 100px"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <input type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+        <script src="scripts/form.js"></script>
       </section>
     </main>
     <footer>
