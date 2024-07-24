@@ -25,7 +25,7 @@ function currentYear() {
     }, 1);                                // O intervalo de tempo é definido como 1 milissegundo
   };
   // Seleciona todos os elementos da página com a classe 'numero' e converte-os num array
-  const items = [...document.querySelectorAll('.numero')];
+  const items = [...document.querySelectorAll('.number')];
   // Para cada elemento selecionado, aplica a função 'atualizaContagem'
   items.forEach((item) => {
     atualizaContagem(item);

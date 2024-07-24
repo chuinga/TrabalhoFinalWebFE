@@ -41,7 +41,6 @@ section {
     margin: 0 auto;
     display: grid;
     gap: 10px;
-    /*intervalo entre as colunas*/
   }
   
   @media screen and (min-width: 992px) {
@@ -67,11 +66,15 @@ section {
     font-size: 20pt;
   }
   
-  .de {
+  .than {
     font-size: 20pt;
   }
 
 .textToRight {
     text-align: right;
     font-size: xx-large;
+}
+
+.mainText {
+  font-size: 25px;
 }
