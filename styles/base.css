@@ -2,7 +2,7 @@ html {
     background-color: rgb(1, 0, 63);
 }
 
-body {
+body, footer, nav {
     background-color: aliceblue;
     margin: 0;
     max-width: 1200px;
