@@ -1,93 +1,146 @@
 main {
-    margin: 110px 0;
-    padding: 20px;
+  margin: 110px 0;
+  padding: 20px;
 }
 
 iframe {
-    width: 100%;
-    height: 500px;
-    margin-bottom: 50px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px;
 }
 
-.intro {    
-    margin-bottom: 50px;
+.intro {
+  margin-bottom: 50px;
 }
 
 .imgToLeft {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .imgToRight {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .arco {
-    width: 40%;
+  width: 40%;
 }
 
 .description {
-    width: 60%;
-    margin-right: 20px;
+  width: 60%;
+  margin-right: 20px;
 }
 
 section {
-    padding: 10px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 10px;
+  padding: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    grid-template-columns: auto auto auto;
   }
-  
-  @media screen and (min-width: 992px) {
-    section {
-      grid-template-columns: auto auto auto;
-    }
-  }
-  
-  article {
-    background: #edecff;
-    padding: 20px;
-    border-bottom: 4px solid #86b0e2;
-    text-align: center;
-    height: 150px;
-  }
-  
-  article span {
-    font-size: 40pt;
-    font-weight: bold;
-  }
-  
-  article p {
-    margin: 0;
-    font-size: 20pt;
-  }
-  
-  .than {
-    font-size: 20pt;
-  }
+}
+
+article {
+  background: #edecff;
+  padding: 20px;
+  border-bottom: 4px solid #86b0e2;
+  text-align: center;
+  height: 150px;
+}
+
+article span {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
+article p {
+  margin: 0;
+  font-size: 20pt;
+}
+
+.than {
+  font-size: 20pt;
+}
 
 .textToRight {
-    text-align: right;
-    font-size: xx-large;
+  text-align: right;
+  font-size: xx-large;
 }
 
 .mainText {
   font-size: 25px;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #b25055;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+select {
+  width: 84%;
+  padding: 12px;
+  border: 1px solid #b25055;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.attachment {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #b25055;
+  border-radius: 4px;
+  cursor: cell;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #86b0e2;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 10px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 10px;
-  }
+  float: left;
+  width: 20%;
+  margin-top: 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 80%;
+  margin-top: 10px;
+}

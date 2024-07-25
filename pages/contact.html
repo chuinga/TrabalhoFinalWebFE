@@ -62,12 +62,12 @@
     </nav>
     <main>
       <section>
-        <h2>Contact us</h2>
+        <h1>Contact us</h1>
         <div class="container">
-          <form id="formpokemons" onsubmit="enviarDados(event)">
+          <form id="form" onsubmit="enviarDados(event)">
             <div class="row">
               <div class="col-25">
-                <label for="name">Name</label>
+                <label for="name">Name:</label>
               </div>
               <div class="col-75">
                 <input
@@ -83,7 +83,7 @@
 
             <div class="row">
               <div class="col-25">
-                <label for="email">Email Address</label>
+                <label for="email">Email Address:</label>
               </div>
               <div class="col-75">
                 <input
@@ -99,7 +99,7 @@
 
             <div class="row">
               <div class="col-25">
-                <label for="phone">Phone Number (optional)</label>
+                <label for="phone">Phone Number: (optional)</label>
               </div>
               <div class="col-75">
                 <input
@@ -116,7 +116,7 @@
 
             <div class="row">
               <div class="col-25">
-                <label for="reason">Reason for Contact</label>
+                <label for="reason">Reason for Contact:</label>
               </div>
               <div class="col-75">
                 <select id="tipopokemon" name="reason" required>
@@ -132,17 +132,17 @@
 
             <div class="row">
               <div class="col-25">
-                <label for="attachment">Attachment Upload (optional)</label>
+                <label for="attachment">Attachment Upload: (optional)</label>
               </div>
               <div class="col-75">
-                <input type="file" name="attachment" id="certificado" />
+                <input class="attachment" type="file" name="attachment" id="certificado" />
               </div>
             </div>
-            <br /><br />
+            <br />
 
             <div class="row">
               <div class="col-25">
-                <label for="message">Message</label>
+                <label for="message">Message:</label>
               </div>
               <div class="col-75">
                 <textarea
@@ -156,8 +156,8 @@
             </div>
             <br />
             <div class="row">
-              <input type="submit" value="Send" />
-              <input class="botao" type="reset" value="Reset" />
+              <input class="button" type="submit" value="Send" />
+              <input class="button" type="reset" value="Reset" />
             </div>
           </form>
         </div>
