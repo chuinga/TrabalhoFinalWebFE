@@ -111,7 +111,7 @@ function finishGame() {
 // Questions array containing the quiz questions and answers
 const questions = [
   {
-    pergunta: "What is the main square of Setúbal called?",
+    pergunta: "Como se chama a praça principal de Setúbal?",
     respostas: [
       { text: "Praça da Liberdade", correto: false },
       { text: "Praça da República", correto: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     pergunta:
-      "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
+      "Que famoso poeta português é comemorado com uma estátua em Setúbal?",
     respostas: [
       { text: "Manuel Maria Barbosa du Bocage", correto: true },
       { text: "Luís de Camões", correto: false },
@@ -130,27 +130,27 @@ const questions = [
     ],
   },
   {
-    pergunta: "What is the Arrábida Natural Park best known for?",
+    pergunta: "Pelo que é mais conhecido o Parque Natural da Arrábida?",
     respostas: [
-      { text: "Coastal cliffs and biodiversity", correto: true },
-      { text: "Desert landscapes", correto: false },
-      { text: "Snow sports", correto: false },
-      { text: "Volcanic activity", correto: false },
+      { text: "Falésias costeiras e biodiversidade", correto: true },
+      { text: "Paisagens desérticas", correto: false },
+      { text: "Desportos de neve", correto: false },
+      { text: "Actividade vulcânica", correto: false },
     ],
   },
   {
-    pergunta: "Is snowboarding a common activity at Praia dos Coelhos?",
+    pergunta: "O snowboard é uma actividade comum na Praia dos Coelhos?",
     respostas: [
-      { text: "False", correto: true },
-      { text: "True", correto: false },
+      { text: "Falso", correto: true },
+      { text: "Verdadeiro", correto: false },
     ],
   },
 
   {
-    pergunta: "Is Moscatel a local wine from Setúbal?",
+    pergunta: "O Moscatel é um vinho local de Setúbal?",
     respostas: [
-      { text: "False", correto: false },
-      { text: "True", correto: true },
+      { text: "Falso", correto: false },
+      { text: "Verdadeiro", correto: true },
     ],
   },
 ];
