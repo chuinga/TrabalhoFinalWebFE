@@ -1,169 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Tags and Favicon Links -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Stylesheet Links -->
-    <link rel="stylesheet" type="text/css" href="/styles/base.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/footer.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/assets/icons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/icons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#039ea2" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Setúbal</title>
-  </head>
 
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <!-- Dropdown Menu -->
-      <div class="dropdown">
-        <button class="dropbtn">Menu ▼</button>
-        <div class="dropdown-content">
-          <a href="/index.html">Home</a>
-          <a href="/pages/arrabida.html">Arrábida</a>
-          <a href="/pages/beaches.html">Beaches</a>
-          <a href="/pages/gastronomy.html">Gastronomy</a>
-          <a href="/pages/contact.html">Contact</a>
-          <a href="/pages/about.html">About</a>
-        </div>
+<head>
+  <!-- Meta Tags and Favicon Links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Stylesheet Links -->
+  <link rel="stylesheet" type="text/css" href="/styles/base.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/footer.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/icons/site.webmanifest" />
+  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#039ea2" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Setúbal</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+      <button class="dropbtn">Menu ▼</button>
+      <div class="dropdown-content">
+        <a href="/index.html">Home</a>
+        <a href="/pages/arrabida.html">Arrábida</a>
+        <a href="/pages/beaches.html">Beaches</a>
+        <a href="/pages/gastronomy.html">Gastronomy</a>
+        <a href="/pages/contact.html">Contact</a>
+        <a href="/pages/about.html">About</a>
       </div>
-      <!-- Logo -->
-      <a href="/index.html">
-        <img class="logo" src="/assets/images/logo.png" alt="Logo" />
-      </a>
-      <!-- Language Selection -->
-      <div class="languages">
-        <a href="/index.html"
-          ><img src="/assets/icons/en.png" alt="English"
-        /></a>
-        <a href="/index.html"
-          ><img src="/assets/icons/pt.png" alt="Portuguese"
-        /></a>
+    </div>
+    <!-- Logo -->
+    <a href="/index.html">
+      <img class="logo" src="/assets/images/logo.png" alt="Logo" />
+    </a>
+    <!-- Language Selection -->
+    <div class="languages">
+      <a href="/index.html"><img src="/assets/icons/en.png" alt="English" /></a>
+      <a href="/index.html"><img src="/assets/icons/pt.png" alt="Portuguese" /></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro imgToLeft">
+      <div class="description">
+        <h1>Arrábida</h1>
+        <p class="mainText">
+          Arrábida Natural Park is a protected area in Portugal. Founded in
+          1976, the park occupies an area of 176.41 km2 (68.11 sq mi), (123.30
+          km2 (47.61 sq mi) on land and 53.11 km2 (20.51 sq mi) at sea)
+          covering the southernmost margin of the Setúbal Peninsula.
+        </p>
       </div>
-    </nav>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/iFqfH89nTQ4?si=oFz5pb9g5Vd0AKbd"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
 
-    <main>
-      <section class="intro imgToLeft">
-        <div class="description">
-          <h1>Arrábida</h1>
-          <p class="mainText">
-            Arrábida Natural Park is a protected area in Portugal. Founded in
-            1976, the park occupies an area of 176.41 km2 (68.11 sq mi), (123.30
-            km2 (47.61 sq mi) on land and 53.11 km2 (20.51 sq mi) at sea)
-            covering the southernmost margin of the Setúbal Peninsula.
-          </p>
-        </div>
-        <video class="video" height="280px" autoplay controls loop>
-          <source src="/assets/videos/cabo_espichel.mp4" type="video/mp4" />
-        </video>
-      </section>
-
-      <section class="intro imgToRight">
-        <div class="description">
-          <h1>Climate</h1>
-          <p class="mainText">
-            Arrábida has a Mediterranean climate with warm dry summers and mild
-            wet winters. Its exposure to the Atlantic Ocean has a large
-            influence over the temperature and the humidity felt throughout the
-            year. The humid air masses that come from the Atlantic in the cooler
-            months are confronted by the rugged mountains resulting in abundant
-            precipitation in November and December. In the summer, some
-            upwelling occurs around Cabo Espichel which decreases sea
-            temperature and increases the frequency of fogs, which are usually
-            only present in the morning or late in the day.
-          </p>
-        </div>
-        <img
-          class="arco"
-          src="/assets/images/serra_do_risco6000x4000.jpg"
-          alt="Serra do Risco"
-        />
-      </section>
-      <script src="/scripts/main.js"></script>
-      <section class="intro imgToLeft">
-        <div class="description">
-          <h1>Geography</h1>
-          <p class="mainText">
-            The park is named for the main geomorphological unit that covers the
-            entire area, designated the Arrábida cordillera or massif,
-            consisting of three subareas:
-          </p>
-          <ul>
-            <li>
-              An area of small elevations around Sesimbra, associated with the
-              Serra do Risco and Serra da Arrábida, consisting of hilltops
-              between Outão and Setúbal
-            </li>
-            <li>
-              A zone between the Serra de São Luís and the Serra dos Gaiteiros
-            </li>
-            <li>
-              An area formed by the Serras do Louro and Serra de São Francisco.
-            </li>
-          </ul>
-        </div>
-        <img
-          class="arco"
-          src="/assets/images/setubal2048x1536.jpg"
-          alt="Setúbal"
-        />
-      </section>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119640.59391663154!2d-9.137451398744135!3d38.454052999812035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd194fd99d329631%3A0xaee8c5c0c2725b28!2sParque%20Natural%20da%20Arr%C3%A1bida!5e1!3m2!1spt-PT!2spt!4v1721918607007!5m2!1spt-PT!2spt"
-        width="800"
-        height="600"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </main>
-
-    <footer>
-      <!-- Footer -->
-      <div class="social">
-        <!-- Social Media Links -->
-        <a href="https://www.mun-setubal.pt/" target="_blank"
-          ><img src="/assets/icons/android-chrome-192x192.png" alt="Município"
-        /></a>
-        <a href="https://www.facebook.com/municipiodesetubal" target="_blank"
-          ><img src="/assets/icons/facebook.png" alt="Facebook"
-        /></a>
-        <a href="https://www.instagram.com/municipiodesetubal/" target="_blank"
-          ><img src="/assets/icons/instagram.png" alt="Instagram"
-        /></a>
-        <a href="https://www.youtube.com/@municipiodesetubal" target="_blank"
-          ><img src="/assets/icons/youtube.png" alt="YouTube"
-        /></a>
+    <section class="intro imgToRight">
+      <div class="description">
+        <h1>Climate</h1>
+        <p class="mainText">
+          Arrábida has a Mediterranean climate with warm dry summers and mild
+          wet winters. Its exposure to the Atlantic Ocean has a large
+          influence over the temperature and the humidity felt throughout the
+          year. The humid air masses that come from the Atlantic in the cooler
+          months are confronted by the rugged mountains resulting in abundant
+          precipitation in November and December. In the summer, some
+          upwelling occurs around Cabo Espichel which decreases sea
+          temperature and increases the frequency of fogs, which are usually
+          only present in the morning or late in the day.
+        </p>
       </div>
-      <!-- Copyright Notice -->
-      <p>&copy; <span id="current-year">0</span> mfpmartins.dev</p>
-    </footer>
+      <img class="arco" src="/assets/images/serra_do_risco6000x4000.jpg" alt="Serra do Risco" />
+    </section>
     <script src="/scripts/main.js"></script>
-  </body>
+    <section class="intro imgToLeft">
+      <div class="description">
+        <h1>Geography</h1>
+        <p class="mainText">
+          The park is named for the main geomorphological unit that covers the
+          entire area, designated the Arrábida cordillera or massif,
+          consisting of three subareas:
+        </p>
+        <ul>
+          <li>
+            An area of small elevations around Sesimbra, associated with the
+            Serra do Risco and Serra da Arrábida, consisting of hilltops
+            between Outão and Setúbal
+          </li>
+          <li>
+            A zone between the Serra de São Luís and the Serra dos Gaiteiros
+          </li>
+          <li>
+            An area formed by the Serras do Louro and Serra de São Francisco.
+          </li>
+        </ul>
+      </div>
+      <img class="arco" src="/assets/images/setubal2048x1536.jpg" alt="Setúbal" />
+    </section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119640.59391663154!2d-9.137451398744135!3d38.454052999812035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd194fd99d329631%3A0xaee8c5c0c2725b28!2sParque%20Natural%20da%20Arr%C3%A1bida!5e1!3m2!1spt-PT!2spt!4v1721918607007!5m2!1spt-PT!2spt"
+      width="800" height="600" style="border: 0" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </main>
+
+  <footer>
+    <!-- Footer -->
+    <div class="social">
+      <!-- Social Media Links -->
+      <a href="https://www.mun-setubal.pt/" target="_blank"><img src="/assets/icons/android-chrome-192x192.png"
+          alt="Município" /></a>
+      <a href="https://www.facebook.com/municipiodesetubal" target="_blank"><img src="/assets/icons/facebook.png"
+          alt="Facebook" /></a>
+      <a href="https://www.instagram.com/municipiodesetubal/" target="_blank"><img src="/assets/icons/instagram.png"
+          alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@municipiodesetubal" target="_blank"><img src="/assets/icons/youtube.png"
+          alt="YouTube" /></a>
+    </div>
+    <!-- Copyright Notice -->
+    <p>&copy; <span id="current-year">0</span> mfpmartins.dev</p>
+  </footer>
+  <script src="/scripts/main.js"></script>
+</body>
+
 </html>
