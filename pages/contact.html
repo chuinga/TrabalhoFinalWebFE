@@ -62,60 +62,64 @@
     </nav>
     <main>
       <section>
-        <h2>Contact</h2>
+        <h2>Contact us</h2>
         <div class="container">
           <form id="formpokemons" onsubmit="enviarDados(event)">
             <div class="row">
               <div class="col-25">
-                <label for="pokename">Name</label>
+                <label for="name">Name</label>
               </div>
               <div class="col-75">
                 <input
                   type="text"
                   id="pokename"
-                  name="pokename"
-                  placeholder="Nome do Pokémon"
+                  name="name"
+                  placeholder="Your Name"
                   required
                 />
               </div>
             </div>
+            <br />
 
             <div class="row">
               <div class="col-25">
-                <label for="pokename">Email Address</label>
+                <label for="email">Email Address</label>
               </div>
               <div class="col-75">
                 <input
                   type="email"
                   id="pokename"
-                  name="pokename"
-                  placeholder="Nome do Pokémon"
+                  name="email"
+                  placeholder="email@example.com"
                   required
                 />
               </div>
             </div>
+            <br />
 
             <div class="row">
               <div class="col-25">
-                <label for="pokename">Phone Number (optional)</label>
+                <label for="phone">Phone Number (optional)</label>
               </div>
               <div class="col-75">
                 <input
-                  type="text"
-                  id="pokename"
-                  name="pokename"
-                  placeholder="Place your phone number"
-                  required
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+351 123 456 789"
+                  pattern="\+\d{1,3} \d{1,4} \d{1,4} \d{1,4}"
+                  title="Phone number format: +CountryCode LocalNumber (e.g., +351 123 456 789)"
                 />
               </div>
             </div>
+            <br />
 
             <div class="row">
               <div class="col-25">
-                <label for="tipopokemon">Reason for Contact</label>
+                <label for="reason">Reason for Contact</label>
               </div>
               <div class="col-75">
-                <select id="tipopokemon" name="tipopokemon">
+                <select id="tipopokemon" name="reason" required>
                   <option value="none"></option>
                   <option value="support">Support</option>
                   <option value="issue">Issue</option>
@@ -124,16 +128,27 @@
                 </select>
               </div>
             </div>
+            <br />
 
             <div class="row">
               <div class="col-25">
-                <label for="origemnome">Message</label>
+                <label for="attachment">Attachment Upload (optional)</label>
+              </div>
+              <div class="col-75">
+                <input type="file" name="attachment" id="certificado" />
+              </div>
+            </div>
+            <br /><br />
+
+            <div class="row">
+              <div class="col-25">
+                <label for="message">Message</label>
               </div>
               <div class="col-75">
                 <textarea
                   id="origemnome"
-                  name="origemnome"
-                  placeholder="Origem do nome do Pokémon"
+                  name="message"
+                  placeholder="Type your message here..."
                   style="height: 100px"
                   required
                 ></textarea>
@@ -141,7 +156,8 @@
             </div>
             <br />
             <div class="row">
-              <input type="submit" value="Enviar" />
+              <input type="submit" value="Send" />
+              <input class="botao" type="reset" value="Reset" />
             </div>
           </form>
         </div>
