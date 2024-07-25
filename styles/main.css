@@ -1,21 +1,24 @@
+/* Styling for the main content area */
 main {
   margin: 110px 0;
   padding: 20px;
 }
 
+/* Styling for embedded iframes */
 iframe {
   width: 100%;
   height: 500px;
   margin-bottom: 50px;
 }
 
+/* General heading styles */
 h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    margin-top: 0;
-    
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
+/* Styling for sections with introductory content */
 .intro {
   margin-bottom: 50px;
 }
@@ -33,17 +36,17 @@ h1 {
 }
 
 .noImg {
-    width: 80%
+  width: 80%;
 }
 
+/* Specific styling for images with the class 'arco' */
 .arco {
   width: 30%;
-  height: 350px
+  height: 350px;
 }
 
 .me {
-    width: 30%;
-    
+  width: 30%;
 }
 
 .description {
@@ -60,6 +63,7 @@ h1 {
   gap: 10px;
 }
 
+/* Responsive grid layout for screens wider than 992px */
 @media screen and (min-width: 992px) {
   section {
     grid-template-columns: auto auto auto;
@@ -97,6 +101,7 @@ article p {
   font-size: 25px;
 }
 
+/* Styling for text input elements */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -139,6 +144,7 @@ label {
   float: right;
 }
 
+/* Hover effect for submit and reset buttons */
 input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: #86b0e2;
@@ -163,168 +169,176 @@ input[type="reset"]:hover {
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .connect img {
-    width: 60px;
-    margin: 4px;
+  width: 60px;
+  margin: 4px;
 }
 
 audio {
-    background-color: #86b0e2;
-    width: 100%;
-    padding: 4px;
-    z-index: 0;
+  background-color: #86b0e2;
+  width: 100%;
+  padding: 4px;
+  z-index: 0;
 }
 
+/* Flexbox layout for elements with the class 'jogo' */
 .jogo {
-    /*background-color: #38444d;*/
-    width: 100%;
-    min-width: 330px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    position: relative;
-    top: 100px;
-  }
-  
-  .perguntas-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .pergunta {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-  
-  }
-  
-  .respostas-container {
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 16px;
-  }
-  
-  .resposta:disabled {
-    cursor: not-allowed;
-  }
-  
-  .proxima-pergunta {
-    margin-top: 32px;
-  }
-  
-  .button {
-    background-color: #86b0e2;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-    border: 0;
-    height: 50px;
-    padding: 0 40px;
-    transition: filter 0.1s;
-  }
-  
-  .button:not(:disabled):hover {
-    filter: brightness(0.8);
-  }
-  
-  .final-message {
-    color: #ffffff;
-    font-size: 30px;
-    text-align: center;
-  }
-  
-  .final-message span {
-    color: #ffffff;
-    display: block;
-    margin-top: 8px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .esconder {
-    display: none;
-  }
-  
-  .correto {
-    color: #09f56f;
-  }
-  
-  .incorreto {
-    color: #f81010;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  .botaoquiz{
-    padding: 20px;
-    font-size: 20pt;
-    min-width: 200px;
-  }
-
-  #fundoperguntas{
-    background-image: url('/assets/images/questions.jpg');
-    width: 100%;
-    height: 500px;
-    margin-bottom: 80px;
-  }
-  
-  .botaoadivinhar{
-    padding: 20px;
-    font-size: 20pt;
-    position: relative;
-    top:180px;
-    min-width: 200px;
-  }
-  
-  .bungee-regular {
-    font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0 60px 0;
-    font-size: 18px;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /*background-color: #38444d;*/
+  width: 100%;
+  min-width: 330px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
 }
 
-th, td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
+.perguntas-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-th {
-    background-color: #768228;
-    color: white;
+.pergunta {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.respostas-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
 }
 
-tr:hover {
-    background-color: #e9f5e9;
+.resposta:disabled {
+  cursor: not-allowed;
 }
 
+.proxima-pergunta {
+  margin-top: 32px;
+}
+
+.button {
+  background-color: #86b0e2;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  height: 50px;
+  padding: 0 40px;
+  transition: filter 0.1s;
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+.final-message {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.final-message span {
+  color: #ffffff;
+  display: block;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.esconder {
+  display: none;
+}
+
+.correto {
+  color: #09f56f;
+}
+
+.incorreto {
+  color: #f81010;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Styling for elements with the class 'botaoquiz' */
+.botaoquiz {
+  padding: 20px;
+  font-size: 20pt;
+  min-width: 200px;
+}
+
+#fundoperguntas {
+  background-image: url("/assets/images/questions.jpg");
+  width: 100%;
+  height: 500px;
+  margin-bottom: 80px;
+}
+
+.botaoadivinhar {
+  padding: 20px;
+  font-size: 20pt;
+  position: relative;
+  top: 180px;
+  min-width: 200px;
+}
+
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Styling for table elements */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 60px 0;
+  font-size: 18px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for table headers and cells */
+th,
 td {
-    color: #333;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Styling for table headers */
+th {
+  background-color: #768228;
+  color: white;
+}
+
+/* Styling for even table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #e9f5e9;
+}
+
+/* General styling for table cells */
+td {
+  color: #333;
 }

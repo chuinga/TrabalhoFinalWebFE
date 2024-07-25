@@ -1,20 +1,25 @@
+/* Background color for the entire HTML document */
 html {
-    background-color: rgb(1, 0, 63);
+  background-color: rgb(1, 0, 63);
 }
 
-body, footer, nav {
-    background-color: aliceblue;
-    margin: 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* General styling for body, footer, and nav elements */
+body,
+footer,
+nav {
+  background-color: aliceblue;
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Styling for the main content area */
 main {
-    margin: 10px;
+  margin: 10px;
 }
 
+/* General paragraph styling */
 p {
-    text-align: justify;
+  text-align: justify;
 }
-

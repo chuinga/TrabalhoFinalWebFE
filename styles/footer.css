@@ -1,23 +1,25 @@
+/* Footer styling */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 110px;
-  background-color: #86b0e2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  padding-top: 20px;
-  z-index: 1;
+  position: fixed; /* Fixed position at the bottom of the viewport */
+  bottom: 0; /* Align to the bottom of the viewport */
+  width: 100%; /* Full width */
+  height: 150px; /* Height of the footer */
+  background-color: #86b0e2; /* Background color */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column direction for flex items */
+  justify-content: center; /* Center align items vertically */
+  align-items: center; /* Center align items horizontally */
+  padding-top: 20px; /* Top padding */
+  z-index: 1; /* Ensure the footer is above other elements */
 }
 
+/* Paragraph styling within the footer */
 footer p {
-  font-size: 1.5em;
+  font-size: 1.5em; /* Larger font size for readability */
 }
 
+/* Social media icons styling within the footer */
 .social img {
-  width: 30px;
-  margin: 4px;
+  width: 30px; /* Width of the icons */
+  margin: 4px; /* Margin around the icons */
 }
