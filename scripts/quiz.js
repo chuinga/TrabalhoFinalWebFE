@@ -104,45 +104,45 @@ function finishGame() {
 
 const questions = [
   {
-    pergunta: "Há quantos anos existem os Pokémons?",
+    pergunta: "What is the main square of Setúbal called?",
     respostas: [
-      { text: "25", correto: false },
-      { text: "15", correto: false },
-      { text: "35", correto: true },
-      { text: "10", correto: false }
+      { text: "Praça da Liberdade", correto: false },
+      { text: "Praça da República", correto: false },
+      { text: "Praça do Bocage", correto: true },
+      { text: "Praça do Comércio", correto: false }
     ]
   },
   {
-    pergunta: "Quem criou os Pokémons?",
+    pergunta: "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
     respostas: [
-      { text: "Satoshi Tajiri", correto: true },
-      { text: "Seed Pokémon", correto: false },
-      { text: "Mouse Pokémon", correto: false },
-      { text: "Satoshi Pokémon", correto: false }
+      { text: "Manuel Maria Barbosa du Bocage", correto: true },
+      { text: "Luís de Camões", correto: false },
+      { text: "Fernando Pessoa", correto: false },
+      { text: "Antero de Quental", correto: false }
     ]
   },
   {
-    pergunta: "Qual é a espécie do Pikachu?",
+    pergunta: "What is the Arrábida Natural Park best known for?",
     respostas: [
-      { text: "Mouse Pokémon", correto: true },
-      { text: "Seed Pokémon", correto: false },
-      { text: "Water Pokémon", correto: false },
-      { text: "Ice Pokémon", correto: false }
+      { text: "Coastal cliffs and biodiversity", correto: true },
+      { text: "Desert landscapes", correto: false },
+      { text: "Snow sports", correto: false },
+      { text: "Volcanic activity", correto: false }
     ]
   },
   {
-    pergunta: 'Chikorita, Pupitar e Slugma são Pokémos da 1.ª geração?',
+    pergunta: 'Is snowboarding a common activity at Praia dos Coelhos?',
     respostas: [
-      { text: "Verdadeiro", correto: false },
-      { text: "Falso", correto: true }
+      { text: "False", correto: true },
+      { text: "True", correto: false }
     ]
   },
   
   {
-    pergunta: "Qual a habilidade do Bulbasaur?",
+    pergunta: "Is Moscatel a local wine from Setúbal?",
     respostas: [
-      { text: 'Static', correto: false },
-      { text: 'Overgrow', correto: true },
+      { text: 'False', correto: false },
+      { text: 'True', correto: true },
     ]
   },
 ]

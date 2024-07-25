@@ -203,6 +203,7 @@ audio {
   }
   
   .pergunta {
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -210,7 +211,7 @@ audio {
   }
   
   .respostas-container {
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-columns: auto auto;
     gap: 16px;
@@ -225,7 +226,7 @@ audio {
   }
   
   .button {
-    background-color: #38444d;
+    background-color: #86b0e2;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -240,11 +241,13 @@ audio {
   }
   
   .final-message {
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 30px;
     text-align: center;
   }
   
   .final-message span {
+    color: #ffffff;
     display: block;
     margin-top: 8px;
     justify-content: center;
