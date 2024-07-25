@@ -33,6 +33,7 @@
     <meta name="msapplication-TileColor" content="#039ea2" />
     <meta name="theme-color" content="#ffffff" />
     <title>Setúbal</title>
+    <script src="scripts/quiz.js" async></script>
   </head>
 
   <body>
@@ -61,9 +62,61 @@
       </div>
     </nav>
     <main>
+      <section class="intro imgToRight">
+        <div class="description">
+          <h1>About</h1>
+          <p class="mainText">
+            I'm Miguel, a Full-Stack Developer with a drive for excellence and a
+            thirst for knowledge. With a strong foundation in web development, a
+            portfolio of exciting projects, and a diverse set of interests
+            ranging from downhill biking to music composition.
+          </p>
+          <div class="about">
+            <div class="connect">
+              <a href="https://mfpmartins.dev/project/gravity"
+                ><img src="/assets/icons/portfolio.png" alt="Portfolio" /></a
+              ><a href="https://www.linkedin.com/in/migmrt/"
+                ><img src="/assets/icons/linkedin.png" alt="LinkedIn" /></a
+              ><a href="https://github.com/chuinga"
+                ><img src="/assets/icons/github.png" alt="Github"
+              /></a>
+            </div>
+            <audio controls loop>
+              <source
+                src="/assets/audio/littleplanet.mp3"
+                type="audio/mpeg"
+                autoplay
+                loop
+              />
+            </audio>
+          </div>
+        </div>
+        <img class="me" src="/assets/images/eu2016.jpg" alt="Myself" />
+      </section>
       <section>
-        <h2>About</h2>
-        
+        <div id="fundoperguntas">
+          <div class="">
+            <div class="jogo">
+              <div class="perguntas-container esconder">
+                <span class="pergunta">Pergunta aqui?</span>
+                <div class="respostas-container">
+                  <button class="resposta button">Resposta 1</button>
+                  <button class="resposta button">Resposta 2</button>
+                  <button class="resposta button">Resposta 3</button>
+                  <button class="resposta button">Resposta 4</button>
+                </div>
+              </div>
+              <div class="controls-container">
+                <button class="iniciar bungee-regular botao botaoquiz">
+                  Teste os seus conhecimentos
+                </button>
+                <button class="proxima-pergunta button esconder">
+                  Próxima pergunta
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>

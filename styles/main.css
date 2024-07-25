@@ -37,7 +37,13 @@ h1 {
 }
 
 .arco {
-  width: 40%;
+  width: 30%;
+  height: 350px
+}
+
+.me {
+    width: 30%;
+    
 }
 
 .description {
@@ -155,3 +161,113 @@ input[type="reset"]:hover {
   width: 80%;
   margin-top: 10px;
 }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.connect img {
+    width: 60px;
+    margin: 4px;
+}
+
+audio {
+    background-color: #86b0e2;
+    width: 100%;
+    padding: 4px;
+}
+
+.jogo {
+    /*background-color: #38444d;*/
+    width: 100%;
+    min-width: 330px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    top: 100px;
+  }
+  
+  .perguntas-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .pergunta {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  
+  }
+  
+  .respostas-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+  }
+  
+  .resposta:disabled {
+    cursor: not-allowed;
+  }
+  
+  .proxima-pergunta {
+    margin-top: 32px;
+  }
+  
+  .button {
+    background-color: #38444d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    height: 50px;
+    padding: 0 40px;
+    transition: filter 0.1s;
+  }
+  
+  .button:not(:disabled):hover {
+    filter: brightness(0.8);
+  }
+  
+  .final-message {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .final-message span {
+    display: block;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .esconder {
+    display: none;
+  }
+  
+  .correto {
+    color: #09f56f;
+  }
+  
+  .incorreto {
+    color: #f81010;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .botaoquiz{
+    padding: 20px;
+    font-size: 20pt;
+    min-width: 200px;
+  }
