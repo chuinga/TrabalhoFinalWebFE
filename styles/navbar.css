@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 100%;
   background-color: #b25055;
+  z-index: 1;
 }
 
 .navbar a {
