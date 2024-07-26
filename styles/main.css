@@ -171,13 +171,19 @@ input[type="reset"]:hover {
 
 .col-25 {
   float: left;
-  width: 20%;
+  width: 25%;
   margin-top: 10px;
 }
 
 .col-75 {
   float: left;
-  width: 80%;
+  width: 75%;
+  margin-top: 10px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
   margin-top: 10px;
 }
 
