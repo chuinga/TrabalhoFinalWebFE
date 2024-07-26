@@ -63,6 +63,18 @@ h1 {
   gap: 10px;
 }
 
+.contactForm {
+  padding: 10px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 10px;  
+}
+
+.mainForm {
+  height: 1000px;
+}
+
 /* Responsive grid layout for screens wider than 992px */
 @media screen and (min-width: 992px) {
   section {
@@ -152,6 +164,7 @@ input[type="reset"]:hover {
 
 .container {
   border-radius: 5px;
+  height: 450px;
   background-color: #f2f2f2;
   padding: 20px;
 }
