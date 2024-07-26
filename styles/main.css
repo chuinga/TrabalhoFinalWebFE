@@ -121,7 +121,7 @@ textarea {
   width: 80%;
   padding: 12px;
   border: 1px solid #b25055;
-  border-radius: 4px;
+  border-radius: 8px;
   resize: vertical;
 }
 
@@ -129,16 +129,8 @@ select {
   width: 84%;
   padding: 12px;
   border: 1px solid #b25055;
-  border-radius: 4px;
+  border-radius: 8px;
   resize: vertical;
-}
-
-.attachment {
-  width: 80%;
-  padding: 12px;
-  border: 1px solid #b25055;
-  border-radius: 4px;
-  cursor: cell;
 }
 
 label {
@@ -164,9 +156,9 @@ input[type="reset"]:hover {
 
 .container {
   border-radius: 5px;
-  height: 400px;
+  height: 450px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
 }
 
 .col-25 {
@@ -181,9 +173,9 @@ input[type="reset"]:hover {
   margin-top: 10px;
 }
 
-.col-50 {
+.col-44 {
   float: left;
-  width: 50%;
+  width: 44%;
   margin-top: 10px;
 }
 
@@ -260,6 +252,7 @@ audio {
   border-radius: 40%;
   height: 50px;
   padding: 0 40px;
+  margin-top: 20px;
   transition: filter 0.1s;
 }
 
