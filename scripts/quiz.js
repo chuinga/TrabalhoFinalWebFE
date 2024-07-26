@@ -138,7 +138,7 @@ function finishGame() {
 } */
 
 // Questions array containing the quiz questions and answers
-const questions = [
+const perguntas = [
   // Multiple-choice questions
   {
     pergunta: "What is the main square of Setúbal called?",
