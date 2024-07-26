@@ -137,7 +137,7 @@ label {
   padding: 12px 12px 12px 0;
 }
 
-.button {
+.form-button {
   background-color: #000000;
   color: white;
   padding: 12px 20px;
@@ -200,7 +200,7 @@ audio {
 
 /* Quiz game styles */
 /* Flexbox layout for elements with the class 'jogo' */
-.jogo {
+.game {
   width: 100%;
   min-width: 330px;
   padding: 16px;
@@ -212,7 +212,7 @@ audio {
   top: 100px;
 }
 
-.perguntas-container {
+.questions-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -220,7 +220,7 @@ audio {
   gap: 20px;
 }
 
-.pergunta {
+.question {
   background-color: #86b0e2;
   border: 2px solid #b25055;
   color: #ffffff;
@@ -230,18 +230,18 @@ audio {
   padding: 2px;
 }
 
-.respostas-container {
+.answers-container {
   width: 80%;
   display: grid;
   grid-template-columns: auto auto;
   gap: 16px;
 }
 
-.resposta:disabled {
+.answer:disabled {
   cursor: not-allowed;
 }
 
-.proxima-pergunta {
+.next-question {
   margin-top: 32px;
 }
 
@@ -276,15 +276,15 @@ audio {
   align-items: center;
 }
 
-.esconder {
+.hide {
   display: none;
 }
 
-button.correto {
+button.correct {
   color: #09f56f;
 }
 
-button.incorreto {
+button.incorrect {
   color: #f81010;
 }
 
@@ -293,13 +293,13 @@ button {
 }
 
 /* Styling for elements with the class 'botaoquiz' */
-.botaoquiz {
-  padding: 20px;
+.quizButton {
+  padding: 30px;
   font-size: 20pt;
   min-width: 200px;
 }
 
-#fundoperguntas {
+#questions-background {
   background-image: url("/assets/images/questions.jpg");
   background-size: cover;
   background-position: center;
@@ -308,7 +308,7 @@ button {
   margin-bottom: 80px;
 }
 
-.botaoadivinhar {
+.guessButton {
   padding: 20px;
   font-size: 20pt;
   position: relative;

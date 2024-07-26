@@ -1,14 +1,14 @@
 // Selecting DOM elements
-const $startGameButton = document.querySelector(".iniciar");
-const $nextQuestionButton = document.querySelector(".proxima-pergunta");
-const $questionsContainer = document.querySelector(".perguntas-container");
-const $questionText = document.querySelector(".pergunta");
-const $answersContainer = document.querySelector(".respostas-container");
-const $respostas = document.querySelectorAll(".resposta");
+const $startGameButton = document.querySelector(".start");
+const $nextQuestionButton = document.querySelector(".next-question");
+const $questionsContainer = document.querySelector(".questions-container");
+const $questionText = document.querySelector(".question");
+const $answersContainer = document.querySelector(".answers-container");
+const $answers = document.querySelectorAll(".answer");
 
 // Initializing game state variables
 let currentQuestionIndex = 0;
-let totalcorreto = 0;
+let totalcorrect = 0;
 
 // Adding event listeners to buttons
 $startGameButton.addEventListener("click", startGame);
@@ -16,8 +16,8 @@ $nextQuestionButton.addEventListener("click", displayNextQuestion);
 
 // Function to start the game
 function startGame() {
-  $startGameButton.classList.add("esconder");
-  $questionsContainer.classList.remove("esconder");
+  $startGameButton.classList.add("hide");
+  $questionsContainer.classList.remove("hide");
   displayNextQuestion();
 }
 
@@ -29,13 +29,13 @@ function displayNextQuestion() {
     return finishGame();
   }
 
-  $questionText.textContent = questions[currentQuestionIndex].pergunta;
-  questions[currentQuestionIndex].respostas.forEach((answer) => {
+  $questionText.textContent = questions[currentQuestionIndex].question;
+  questions[currentQuestionIndex].answers.forEach((answer) => {
     const newAnswer = document.createElement("button");
-    newAnswer.classList.add("button", "resposta");
+    newAnswer.classList.add("button", "answer");
     newAnswer.textContent = answer.text;
-    if (answer.correto) {
-      newAnswer.dataset.correto = answer.correto;
+    if (answer.correct) {
+      newAnswer.dataset.correct = answer.correct;
     }
     $answersContainer.appendChild(newAnswer);
 
@@ -50,38 +50,38 @@ function resetState() {
   }
 
   document.body.removeAttribute("class");
-  $nextQuestionButton.classList.add("esconder");
+  $nextQuestionButton.classList.add("hide");
 }
 
 // Function to handle answer selection
 function selectAnswer(event) {
   const answerClicked = event.target;
 
-  if (answerClicked.dataset.correto) {
-    document.body.classList.add("correto");
-    totalcorreto++;
+  if (answerClicked.dataset.correct) {
+    document.body.classList.add("correct");
+    totalcorrect++;
   } else {
-    document.body.classList.add("incorreto");
+    document.body.classList.add("incorrect");
   }
 
-  document.querySelectorAll(".resposta").forEach((button) => {
+  document.querySelectorAll(".answer").forEach((button) => {
     button.disabled = true;
 
-    if (button.dataset.correto) {
-      button.classList.add("correto");
+    if (button.dataset.correct) {
+      button.classList.add("correct");
     } else {
-      button.classList.add("incorreto");
+      button.classList.add("incorrect");
     }
   });
 
-  $nextQuestionButton.classList.remove("esconder");
+  $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
 }
 
 // Function to finish the game and display the result
 function finishGame() {
   const totalQuestions = questions.length;
-  const performance = Math.floor((totalcorreto * 100) / totalQuestions);
+  const performance = Math.floor((totalcorrect * 100) / totalQuestions);
 
   let message = "";
 
@@ -100,7 +100,7 @@ function finishGame() {
   }
 
   $questionsContainer.innerHTML = `<p class="final-message">
-      You got ${totalcorreto} out of ${totalQuestions} questions right!
+      You got ${totalcorrect} out of ${totalQuestions} questions right!
       <span>Result: ${message}</span>
     </p>
     <button onclick=window.location.reload() class="button">
@@ -112,174 +112,174 @@ function finishGame() {
 const questions = [
   // Multiple-choice questions
   {
-    pergunta: "What is the main square of Setúbal called?",
-    respostas: [
-      { text: "Praça da Liberdade", correto: false },
-      { text: "Praça da República", correto: false },
-      { text: "Praça do Bocage", correto: true },
-      { text: "Praça do Comércio", correto: false },
+    question: "What is the main square of Setúbal called?",
+    answers: [
+      { text: "Praça da Liberdade", correct: false },
+      { text: "Praça da República", correct: false },
+      { text: "Praça do Bocage", correct: true },
+      { text: "Praça do Comércio", correct: false },
     ],
   },
   {
-    pergunta: "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
-    respostas: [
-      { text: "Manuel Maria Barbosa du Bocage", correto: true },
-      { text: "Luís de Camões", correto: false },
-      { text: "Fernando Pessoa", correto: false },
-      { text: "Antero de Quental", correto: false },
+    question: "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
+    answers: [
+      { text: "Manuel Maria Barbosa du Bocage", correct: true },
+      { text: "Luís de Camões", correct: false },
+      { text: "Fernando Pessoa", correct: false },
+      { text: "Antero de Quental", correct: false },
     ],
   },
   {
-    pergunta: "What is the name of the river that flows through Setúbal?",
-    respostas: [
-      { text: "Douro", correto: false },
-      { text: "Mondego", correto: false },
-      { text: "Sado", correto: true },
-      { text: "Tejo", correto: false },
+    question: "What is the name of the river that flows through Setúbal?",
+    answers: [
+      { text: "Douro", correct: false },
+      { text: "Mondego", correct: false },
+      { text: "Sado", correct: true },
+      { text: "Tejo", correct: false },
     ],
   },
   {
-    pergunta: "Which historical building in Setúbal was once a Jesuit monastery?",
-    respostas: [
-      { text: "Convento de Jesus", correto: true },
-      { text: "Convento de São Francisco", correto: false },
-      { text: "Convento de Santa Clara", correto: false },
-      { text: "Convento do Carmo", correto: false },
+    question: "Which historical building in Setúbal was once a Jesuit monastery?",
+    answers: [
+      { text: "Convento de Jesus", correct: true },
+      { text: "Convento de São Francisco", correct: false },
+      { text: "Convento de Santa Clara", correct: false },
+      { text: "Convento do Carmo", correct: false },
     ],
   },
   {
-    pergunta: "Which Setúbal bridge connects the city to the Troia Peninsula?",
-    respostas: [
-      { text: "Ponte 25 de Abril", correto: false },
-      { text: "Ponte Vasco da Gama", correto: false },
-      { text: "Ponte de São Francisco", correto: false },
-      { text: "Ponte da Doca", correto: true },
+    question: "Which Setúbal bridge connects the city to the Troia Peninsula?",
+    answers: [
+      { text: "Ponte 25 de Abril", correct: false },
+      { text: "Ponte Vasco da Gama", correct: false },
+      { text: "Ponte de São Francisco", correct: false },
+      { text: "Ponte da Doca", correct: true },
     ],
   },
   {
-    pergunta: "What is the highest peak in the Arrábida mountains?",
-    respostas: [
-      { text: "Serra do Risco", correto: false },
-      { text: "Serra da Arrábida", correto: true },
-      { text: "Serra da Estrela", correto: false },
-      { text: "Serra de Sintra", correto: false },
+    question: "What is the highest peak in the Arrábida mountains?",
+    answers: [
+      { text: "Serra do Risco", correct: false },
+      { text: "Serra da Arrábida", correct: true },
+      { text: "Serra da Estrela", correct: false },
+      { text: "Serra de Sintra", correct: false },
     ],
   },
   {
-    pergunta: "Which unique flora is commonly found in the Arrábida Natural Park?",
-    respostas: [
-      { text: "Pine trees", correto: false },
-      { text: "Cork oaks", correto: false },
-      { text: "Mediterranean scrubland", correto: true },
-      { text: "Olive trees", correto: false },
+    question: "Which unique flora is commonly found in the Arrábida Natural Park?",
+    answers: [
+      { text: "Pine trees", correct: false },
+      { text: "Cork oaks", correct: false },
+      { text: "Mediterranean scrubland", correct: true },
+      { text: "Olive trees", correct: false },
     ],
   },
   {
-    pergunta: "Which historical site is located within the Arrábida mountains?",
-    respostas: [
-      { text: "Convento de Cristo", correto: false },
-      { text: "Convento da Arrábida", correto: true },
-      { text: "Convento de Mafra", correto: false },
-      { text: "Convento de Belém", correto: false },
+    question: "Which historical site is located within the Arrábida mountains?",
+    answers: [
+      { text: "Convento de Cristo", correct: false },
+      { text: "Convento da Arrábida", correct: true },
+      { text: "Convento de Mafra", correct: false },
+      { text: "Convento de Belém", correct: false },
     ],
   },
   {
-    pergunta: "What is the Arrábida Natural Park best known for?",
-    respostas: [
-      { text: "Coastal cliffs and biodiversity", correto: true },
-      { text: "Desert landscapes", correto: false },
-      { text: "Snow sports", correto: false },
-      { text: "Volcanic activity", correto: false },
+    question: "What is the Arrábida Natural Park best known for?",
+    answers: [
+      { text: "Coastal cliffs and biodiversity", correct: true },
+      { text: "Desert landscapes", correct: false },
+      { text: "Snow sports", correct: false },
+      { text: "Volcanic activity", correct: false },
     ],
   },
   {
-    pergunta: "Which popular outdoor activity is common in the Arrábida mountains?",
-    respostas: [
-      { text: "Surfing", correto: false },
-      { text: "Rock climbing", correto: true },
-      { text: "Skiing", correto: false },
-      { text: "Paragliding", correto: false },
+    question: "Which popular outdoor activity is common in the Arrábida mountains?",
+    answers: [
+      { text: "Surfing", correct: false },
+      { text: "Rock climbing", correct: true },
+      { text: "Skiing", correct: false },
+      { text: "Paragliding", correct: false },
     ],
   },
   {
-    pergunta: "Which beach is renowned for its clear waters and is located in Arrábida?",
-    respostas: [
-      { text: "Praia da Rocha", correto: false },
-      { text: "Praia da Figueirinha", correto: true },
-      { text: "Praia de Carcavelos", correto: false },
-      { text: "Praia da Nazaré", correto: false },
+    question: "Which beach is renowned for its clear waters and is located in Arrábida?",
+    answers: [
+      { text: "Praia da Rocha", correct: false },
+      { text: "Praia da Figueirinha", correct: true },
+      { text: "Praia de Carcavelos", correct: false },
+      { text: "Praia da Nazaré", correct: false },
     ],
   },
   {
-    pergunta: "Which beach is famous for its view of the Troia Peninsula?",
-    respostas: [
-      { text: "Praia da Adraga", correto: false },
-      { text: "Praia da Ribeira", correto: false },
-      { text: "Praia de Galápos", correto: true },
-      { text: "Praia da Manta Rota", correto: false },
+    question: "Which beach is famous for its view of the Troia Peninsula?",
+    answers: [
+      { text: "Praia da Adraga", correct: false },
+      { text: "Praia da Ribeira", correct: false },
+      { text: "Praia de Galápos", correct: true },
+      { text: "Praia da Manta Rota", correct: false },
     ],
   },
   {
-    pergunta: "What is a common activity at Praia dos Coelhos?",
-    respostas: [
-      { text: "Scuba diving", correto: true },
-      { text: "Snowboarding", correto: false },
-      { text: "Windsurfing", correto: false },
-      { text: "Fishing", correto: false },
+    question: "What is a common activity at Praia dos Coelhos?",
+    answers: [
+      { text: "Scuba diving", correct: true },
+      { text: "Snowboarding", correct: false },
+      { text: "Windsurfing", correct: false },
+      { text: "Fishing", correct: false },
     ],
   },
   {
-    pergunta: "Which beach is known for its secluded and tranquil environment in Arrábida?",
-    respostas: [
-      { text: "Praia da Comporta", correto: false },
-      { text: "Praia de Albarquel", correto: true },
-      { text: "Praia do Guincho", correto: false },
-      { text: "Praia da Amoreira", correto: false },
+    question: "Which beach is known for its secluded and tranquil environment in Arrábida?",
+    answers: [
+      { text: "Praia da Comporta", correct: false },
+      { text: "Praia de Albarquel", correct: true },
+      { text: "Praia do Guincho", correct: false },
+      { text: "Praia da Amoreira", correct: false },
     ],
   },
   {
-    pergunta: "Which beach is part of the Arrábida Natural Park and has limited access?",
-    respostas: [
-      { text: "Praia da Rocha", correto: false },
-      { text: "Praia do Portinho da Arrábida", correto: true },
-      { text: "Praia da Foz do Arelho", correto: false },
-      { text: "Praia de São Pedro de Moel", correto: false },
+    question: "Which beach is part of the Arrábida Natural Park and has limited access?",
+    answers: [
+      { text: "Praia da Rocha", correct: false },
+      { text: "Praia do Portinho da Arrábida", correct: true },
+      { text: "Praia da Foz do Arelho", correct: false },
+      { text: "Praia de São Pedro de Moel", correct: false },
     ],
   },
   // True or false questions
   {
-    pergunta: "Is Choco Frito a traditional dish from Setúbal?",
-    respostas: [
-      { text: "True", correto: true },
-      { text: "False", correto: false },
+    question: "Is Choco Frito a traditional dish from Setúbal?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
     ],
   },
   {
-    pergunta: "Is Tortas de Azeitão a type of cheese?",
-    respostas: [
-      { text: "False", correto: true },
-      { text: "True", correto: false },
+    question: "Is Tortas de Azeitão a type of cheese?",
+    answers: [
+      { text: "False", correct: true },
+      { text: "True", correct: false },
     ],
   },
   {
-    pergunta: "Is Queijo de Azeitão a soft, creamy cheese made from cow's milk?",
-    respostas: [
-      { text: "False", correto: true },
-      { text: "True", correto: false },
+    question: "Is Queijo de Azeitão a soft, creamy cheese made from cow's milk?",
+    answers: [
+      { text: "False", correct: true },
+      { text: "True", correct: false },
     ],
   },
   {
-    pergunta: "Is Moscatel de Setúbal a sweet, fortified wine made from Muscat grapes?",
-    respostas: [
-      { text: "True", correto: true },
-      { text: "False", correto: false },
+    question: "Is Moscatel de Setúbal a sweet, fortified wine made from Muscat grapes?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
     ],
   },
   {
-    pergunta: "Is Sardinhas Assadas a common dish in Setúbal?",
-    respostas: [
-      { text: "True", correto: true },
-      { text: "False", correto: false },
+    question: "Is Sardinhas Assadas a common dish in Setúbal?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
     ],
   },
 ];
