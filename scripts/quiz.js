@@ -108,35 +108,6 @@ function finishGame() {
     </button>`;
 }
 
-/* function finishGame() {
-  const totalQuestions = questions.length;
-  const performance = Math.floor((totalcorreto * 100) / totalQuestions);
-
-  let message = "";
-
-  switch (true) {
-    case performance >= 90:
-      message = "Excelente!";
-      break;
-    case performance >= 70:
-      message = "Muito bom!";
-      break;
-    case performance >= 50:
-      message = "Bom!";
-      break;
-    default:
-      message = "Pode melhorar.";
-  }
-
-  $questionsContainer.innerHTML = `<p class="final-message">
-      Acertou em ${totalcorreto} de ${totalQuestions} questões!
-      <span>Resultado: ${message}</span>
-    </p>
-    <button onclick=window.location.reload() class="button">
-      Repetir o teste
-    </button>`;
-} */
-
 // Questions array containing the quiz questions and answers
 const questions = [
   // Multiple-choice questions
@@ -312,51 +283,3 @@ const questions = [
     ],
   },
 ];
-
-
-/* // Questions array containing the quiz questions and answers
-const questions = [
-  {
-    pergunta: "What is the main square of Setúbal called?",
-    respostas: [
-      { text: "Praça da Liberdade", correto: false },
-      { text: "Praça da República", correto: false },
-      { text: "Praça do Bocage", correto: true },
-      { text: "Praça do Comércio", correto: false },
-    ],
-  },
-  {
-    pergunta:
-      "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
-    respostas: [
-      { text: "Manuel Maria Barbosa du Bocage", correto: true },
-      { text: "Luís de Camões", correto: false },
-      { text: "Fernando Pessoa", correto: false },
-      { text: "Antero de Quental", correto: false },
-    ],
-  },
-  {
-    pergunta: "What is the Arrábida Natural Park best known for?",
-    respostas: [
-      { text: "Coastal cliffs and biodiversity", correto: true },
-      { text: "Desert landscapes", correto: false },
-      { text: "Snow sports", correto: false },
-      { text: "Volcanic activity", correto: false },
-    ],
-  },
-  {
-    pergunta: "Is snowboarding a common activity at Praia dos Coelhos?",
-    respostas: [
-      { text: "False", correto: true },
-      { text: "True", correto: false },
-    ],
-  },
-
-  {
-    pergunta: "Is Moscatel a local wine from Setúbal?",
-    respostas: [
-      { text: "False", correto: false },
-      { text: "True", correto: true },
-    ],
-  },
-]; */
