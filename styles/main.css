@@ -68,7 +68,7 @@ h1 {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 10px;  
+  gap: 10px;
 }
 
 .mainForm {
@@ -221,19 +221,27 @@ audio {
 }
 
 .question {
-  background-color: #86b0e2;
-  border: 2px solid #b25055;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #979797, #7f7f7f);
+  box-shadow: 7px 7px 7px #6d6d6d, -7px -7px 7px #adadad;
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  padding: 2px;
+  padding: 10px;
+}
+
+.game-button {
+  border-radius: 7px;
+  background: linear-gradient(145deg, #979797, #7f7f7f);
+  box-shadow: 7px 7px 7px #6d6d6d, -7px -7px 7px #adadad;
+  color: #ffffff;
 }
 
 .answers-container {
   width: 80%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   gap: 16px;
 }
 
@@ -246,12 +254,12 @@ audio {
 }
 
 .button {
-  background-color: #86b0e2;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #979797, #7f7f7f);
+  box-shadow: 7px 7px 7px #6d6d6d, -7px -7px 7px #adadad;
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  border: 2px solid #b25055;
-  border-radius: 40%;
   height: 50px;
   padding: 0 40px;
   margin-top: 20px;

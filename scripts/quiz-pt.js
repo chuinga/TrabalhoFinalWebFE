@@ -1,14 +1,14 @@
 // Selecting DOM elements
-const $startGameButton = document.querySelector(".iniciar");
-const $nextQuestionButton = document.querySelector(".proxima-pergunta");
-const $questionsContainer = document.querySelector(".perguntas-container");
-const $questionText = document.querySelector(".pergunta");
-const $answersContainer = document.querySelector(".respostas-container");
-const $respostas = document.querySelectorAll(".resposta");
+const $startGameButton = document.querySelector(".start");
+const $nextQuestionButton = document.querySelector(".next-question");
+const $questionsContainer = document.querySelector(".questions-container");
+const $questionText = document.querySelector(".question");
+const $answersContainer = document.querySelector(".answers-container");
+const $answers = document.querySelectorAll(".answer");
 
 // Initializing game state variables
 let currentQuestionIndex = 0;
-let totalcorreto = 0;
+let totalcorrect = 0;
 
 // Adding event listeners to buttons
 $startGameButton.addEventListener("click", startGame);
@@ -16,8 +16,8 @@ $nextQuestionButton.addEventListener("click", displayNextQuestion);
 
 // Function to start the game
 function startGame() {
-  $startGameButton.classList.add("esconder");
-  $questionsContainer.classList.remove("esconder");
+  $startGameButton.classList.add("hide");
+  $questionsContainer.classList.remove("hide");
   displayNextQuestion();
 }
 
@@ -29,13 +29,13 @@ function displayNextQuestion() {
     return finishGame();
   }
 
-  $questionText.textContent = questions[currentQuestionIndex].pergunta;
-  questions[currentQuestionIndex].respostas.forEach((answer) => {
+  $questionText.textContent = questions[currentQuestionIndex].question;
+  questions[currentQuestionIndex].answers.forEach((answer) => {
     const newAsnwer = document.createElement("button");
-    newAsnwer.classList.add("button", "resposta");
+    newAsnwer.classList.add("button", "answer");
     newAsnwer.textContent = answer.text;
-    if (answer.correto) {
-      newAsnwer.dataset.correto = answer.correto;
+    if (answer.correct) {
+      newAsnwer.dataset.correct = answer.correct;
     }
     $answersContainer.appendChild(newAsnwer);
 
@@ -50,38 +50,38 @@ function resetState() {
   }
 
   document.body.removeAttribute("class");
-  $nextQuestionButton.classList.add("esconder");
+  $nextQuestionButton.classList.add("hide");
 }
 
 // Function to handle answer selection
 function selectAnswer(event) {
   const answerClicked = event.target;
 
-  if (answerClicked.dataset.correto) {
-    document.body.classList.add("correto");
-    totalcorreto++;
+  if (answerClicked.dataset.correct) {
+    document.body.classList.add("correct");
+    totalcorrect++;
   } else {
-    document.body.classList.add("incorreto");
+    document.body.classList.add("incorrect");
   }
 
-  document.querySelectorAll(".resposta").forEach((button) => {
+  document.querySelectorAll(".answer").forEach((button) => {
     button.disabled = true;
 
-    if (button.dataset.correto) {
-      button.classList.add("correto");
+    if (button.dataset.correct) {
+      button.classList.add("correct");
     } else {
-      button.classList.add("incorreto");
+      button.classList.add("incorrect");
     }
   });
 
-  $nextQuestionButton.classList.remove("esconder");
+  $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
 }
 
 // Function to finish the game and display the result
 function finishGame() {
   const totalQuestions = questions.length;
-  const performance = Math.floor((totalcorreto * 100) / totalQuestions);
+  const performance = Math.floor((totalcorrect * 100) / totalQuestions);
 
   let message = "";
 
@@ -100,7 +100,7 @@ function finishGame() {
   }
 
   $questionsContainer.innerHTML = `<p class="final-message">
-      Acertou em ${totalcorreto} de ${totalQuestions} questões!
+      Acertou em ${totalcorrect} de ${totalQuestions} questões!
       <span>Resultado: ${message}</span>
     </p>
     <button onclick=window.location.reload() class="button">
@@ -112,174 +112,174 @@ function finishGame() {
 const questions = [
   // Multiple-choice questions
   {
-    pergunta: "Como se chama a praça principal de Setúbal?",
-    respostas: [
-      { text: "Praça da Liberdade", correto: false },
-      { text: "Praça da República", correto: false },
-      { text: "Praça do Bocage", correto: true },
-      { text: "Praça do Comércio", correto: false },
+    question: "Como se chama a praça principal de Setúbal?",
+    answers: [
+      { text: "Praça da Liberdade", correct: false },
+      { text: "Praça da República", correct: false },
+      { text: "Praça do Bocage", correct: true },
+      { text: "Praça do Comércio", correct: false },
     ],
   },
   {
-    pergunta: "Qual famoso poeta português é comemorado com uma estátua em Setúbal?",
-    respostas: [
-      { text: "Manuel Maria Barbosa du Bocage", correto: true },
-      { text: "Luís de Camões", correto: false },
-      { text: "Fernando Pessoa", correto: false },
-      { text: "Antero de Quental", correto: false },
+    question: "Qual famoso poeta português é comemorado com uma estátua em Setúbal?",
+    answers: [
+      { text: "Manuel Maria Barbosa du Bocage", correct: true },
+      { text: "Luís de Camões", correct: false },
+      { text: "Fernando Pessoa", correct: false },
+      { text: "Antero de Quental", correct: false },
     ],
   },
   {
-    pergunta: "Qual é o nome do rio que atravessa Setúbal?",
-    respostas: [
-      { text: "Douro", correto: false },
-      { text: "Mondego", correto: false },
-      { text: "Sado", correto: true },
-      { text: "Tejo", correto: false },
+    question: "Qual é o nome do rio que atravessa Setúbal?",
+    answers: [
+      { text: "Douro", correct: false },
+      { text: "Mondego", correct: false },
+      { text: "Sado", correct: true },
+      { text: "Tejo", correct: false },
     ],
   },
   {
-    pergunta: "Qual edifício histórico em Setúbal foi outrora um mosteiro jesuíta?",
-    respostas: [
-      { text: "Convento de Jesus", correto: true },
-      { text: "Convento de São Francisco", correto: false },
-      { text: "Convento de Santa Clara", correto: false },
-      { text: "Convento do Carmo", correto: false },
+    question: "Qual edifício histórico em Setúbal foi outrora um mosteiro jesuíta?",
+    answers: [
+      { text: "Convento de Jesus", correct: true },
+      { text: "Convento de São Francisco", correct: false },
+      { text: "Convento de Santa Clara", correct: false },
+      { text: "Convento do Carmo", correct: false },
     ],
   },
   {
-    pergunta: "Qual ponte de Setúbal liga a cidade à Península de Troia?",
-    respostas: [
-      { text: "Ponte 25 de Abril", correto: false },
-      { text: "Ponte Vasco da Gama", correto: false },
-      { text: "Ponte de São Francisco", correto: false },
-      { text: "Ponte da Doca", correto: true },
+    question: "Qual ponte de Setúbal liga a cidade à Península de Troia?",
+    answers: [
+      { text: "Ponte 25 de Abril", correct: false },
+      { text: "Ponte Vasco da Gama", correct: false },
+      { text: "Ponte de São Francisco", correct: false },
+      { text: "Ponte da Doca", correct: true },
     ],
   },
   {
-    pergunta: "Qual é o pico mais alto da Serra da Arrábida?",
-    respostas: [
-      { text: "Serra do Risco", correto: false },
-      { text: "Serra da Arrábida", correto: true },
-      { text: "Serra da Estrela", correto: false },
-      { text: "Serra de Sintra", correto: false },
+    question: "Qual é o pico mais alto da Serra da Arrábida?",
+    answers: [
+      { text: "Serra do Risco", correct: false },
+      { text: "Serra da Arrábida", correct: true },
+      { text: "Serra da Estrela", correct: false },
+      { text: "Serra de Sintra", correct: false },
     ],
   },
   {
-    pergunta: "Qual flora única é comum no Parque Natural da Arrábida?",
-    respostas: [
-      { text: "Pinheiros", correto: false },
-      { text: "Sobreiros", correto: false },
-      { text: "Mato mediterrânico", correto: true },
-      { text: "Oliveiras", correto: false },
+    question: "Qual flora única é comum no Parque Natural da Arrábida?",
+    answers: [
+      { text: "Pinheiros", correct: false },
+      { text: "Sobreiros", correct: false },
+      { text: "Mato mediterrânico", correct: true },
+      { text: "Oliveiras", correct: false },
     ],
   },
   {
-    pergunta: "Qual sítio histórico está localizado na Serra da Arrábida?",
-    respostas: [
-      { text: "Convento de Cristo", correto: false },
-      { text: "Convento da Arrábida", correto: true },
-      { text: "Convento de Mafra", correto: false },
-      { text: "Convento de Belém", correto: false },
+    question: "Qual sítio histórico está localizado na Serra da Arrábida?",
+    answers: [
+      { text: "Convento de Cristo", correct: false },
+      { text: "Convento da Arrábida", correct: true },
+      { text: "Convento de Mafra", correct: false },
+      { text: "Convento de Belém", correct: false },
     ],
   },
   {
-    pergunta: "Pelo que é mais conhecido o Parque Natural da Arrábida?",
-    respostas: [
-      { text: "Falésias costeiras e biodiversidade", correto: true },
-      { text: "Paisagens desérticas", correto: false },
-      { text: "Desportos de neve", correto: false },
-      { text: "Actividade vulcânica", correto: false },
+    question: "Pelo que é mais conhecido o Parque Natural da Arrábida?",
+    answers: [
+      { text: "Falésias costeiras e biodiversidade", correct: true },
+      { text: "Paisagens desérticas", correct: false },
+      { text: "Desportos de neve", correct: false },
+      { text: "Actividade vulcânica", correct: false },
     ],
   },
   {
-    pergunta: "Qual actividade ao ar livre é comum na Serra da Arrábida?",
-    respostas: [
-      { text: "Surf", correto: false },
-      { text: "Escalada", correto: true },
-      { text: "Esqui", correto: false },
-      { text: "Parapente", correto: false },
+    question: "Qual actividade ao ar livre é comum na Serra da Arrábida?",
+    answers: [
+      { text: "Surf", correct: false },
+      { text: "Escalada", correct: true },
+      { text: "Esqui", correct: false },
+      { text: "Parapente", correct: false },
     ],
   },
   {
-    pergunta: "Qual praia é conhecida pelas suas águas límpidas e está localizada na Arrábida?",
-    respostas: [
-      { text: "Praia da Rocha", correto: false },
-      { text: "Praia da Figueirinha", correto: true },
-      { text: "Praia de Carcavelos", correto: false },
-      { text: "Praia da Nazaré", correto: false },
+    question: "Qual praia é conhecida pelas suas águas límpidas e está localizada na Arrábida?",
+    answers: [
+      { text: "Praia da Rocha", correct: false },
+      { text: "Praia da Figueirinha", correct: true },
+      { text: "Praia de Carcavelos", correct: false },
+      { text: "Praia da Nazaré", correct: false },
     ],
   },
   {
-    pergunta: "Qual praia é famosa pela sua vista da Península de Troia?",
-    respostas: [
-      { text: "Praia da Adraga", correto: false },
-      { text: "Praia da Ribeira", correto: false },
-      { text: "Praia de Galápos", correto: true },
-      { text: "Praia da Manta Rota", correto: false },
+    question: "Qual praia é famosa pela sua vista da Península de Troia?",
+    answers: [
+      { text: "Praia da Adraga", correct: false },
+      { text: "Praia da Ribeira", correct: false },
+      { text: "Praia de Galápos", correct: true },
+      { text: "Praia da Manta Rota", correct: false },
     ],
   },
   {
-    pergunta: "Qual é uma actividade comum na Praia dos Coelhos?",
-    respostas: [
-      { text: "Mergulho", correto: true },
-      { text: "Snowboard", correto: false },
-      { text: "Windsurf", correto: false },
-      { text: "Pesca", correto: false },
+    question: "Qual é uma actividade comum na Praia dos Coelhos?",
+    answers: [
+      { text: "Mergulho", correct: true },
+      { text: "Snowboard", correct: false },
+      { text: "Windsurf", correct: false },
+      { text: "Pesca", correct: false },
     ],
   },
   {
-    pergunta: "Qual praia é conhecida pelo seu ambiente isolado e tranquilo na Arrábida?",
-    respostas: [
-      { text: "Praia da Comporta", correto: false },
-      { text: "Praia de Albarquel", correto: true },
-      { text: "Praia do Guincho", correto: false },
-      { text: "Praia da Amoreira", correto: false },
+    question: "Qual praia é conhecida pelo seu ambiente isolado e tranquilo na Arrábida?",
+    answers: [
+      { text: "Praia da Comporta", correct: false },
+      { text: "Praia de Albarquel", correct: true },
+      { text: "Praia do Guincho", correct: false },
+      { text: "Praia da Amoreira", correct: false },
     ],
   },
   {
-    pergunta: "Qual praia faz parte do Parque Natural da Arrábida e tem acesso limitado?",
-    respostas: [
-      { text: "Praia da Rocha", correto: false },
-      { text: "Praia do Portinho da Arrábida", correto: true },
-      { text: "Praia da Foz do Arelho", correto: false },
-      { text: "Praia de São Pedro de Moel", correto: false },
+    question: "Qual praia faz parte do Parque Natural da Arrábida e tem acesso limitado?",
+    answers: [
+      { text: "Praia da Rocha", correct: false },
+      { text: "Praia do Portinho da Arrábida", correct: true },
+      { text: "Praia da Foz do Arelho", correct: false },
+      { text: "Praia de São Pedro de Moel", correct: false },
     ],
   },
-  // Perguntas de verdadeiro ou falso
+  // questions de verdadeiro ou falso
   {
-    pergunta: "O Choco Frito é um prato tradicional de Setúbal?",
-    respostas: [
-      { text: "Verdadeiro", correto: true },
-      { text: "Falso", correto: false },
-    ],
-  },
-  {
-    pergunta: "As Tortas de Azeitão são um tipo de queijo?",
-    respostas: [
-      { text: "Falso", correto: true },
-      { text: "Verdadeiro", correto: false },
+    question: "O Choco Frito é um prato tradicional de Setúbal?",
+    answers: [
+      { text: "Verdadeiro", correct: true },
+      { text: "Falso", correct: false },
     ],
   },
   {
-    pergunta: "O Queijo de Azeitão é um queijo suave e cremoso feito de leite de vaca?",
-    respostas: [
-      { text: "Falso", correto: true },
-      { text: "Verdadeiro", correto: false },
+    question: "As Tortas de Azeitão são um tipo de queijo?",
+    answers: [
+      { text: "Falso", correct: true },
+      { text: "Verdadeiro", correct: false },
     ],
   },
   {
-    pergunta: "O Moscatel de Setúbal é um vinho doce e fortificado feito de uvas Muscat?",
-    respostas: [
-      { text: "Verdadeiro", correto: true },
-      { text: "Falso", correto: false },
+    question: "O Queijo de Azeitão é um queijo suave e cremoso feito de leite de vaca?",
+    answers: [
+      { text: "Falso", correct: true },
+      { text: "Verdadeiro", correct: false },
     ],
   },
   {
-    pergunta: "As Sardinhas Assadas são um prato comum em Setúbal?",
-    respostas: [
-      { text: "Verdadeiro", correto: true },
-      { text: "Falso", correto: false },
+    question: "O Moscatel de Setúbal é um vinho doce e fortificado feito de uvas Muscat?",
+    answers: [
+      { text: "Verdadeiro", correct: true },
+      { text: "Falso", correct: false },
+    ],
+  },
+  {
+    question: "As Sardinhas Assadas são um prato comum em Setúbal?",
+    answers: [
+      { text: "Verdadeiro", correct: true },
+      { text: "Falso", correct: false },
     ],
   },
 ];

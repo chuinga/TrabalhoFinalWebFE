@@ -3,7 +3,7 @@ footer {
   position: fixed; /* Fixed position at the bottom of the viewport */
   bottom: 0; /* Align to the bottom of the viewport */
   width: 100%; /* Full width */
-  height: 150px; /* Height of the footer */
+  height: 100px; /* Height of the footer */
   background-color: #86b0e2; /* Background color */
   display: flex; /* Flexbox layout */
   flex-direction: column; /* Column direction for flex items */

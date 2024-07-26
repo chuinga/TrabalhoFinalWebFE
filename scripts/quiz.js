@@ -121,7 +121,8 @@ const questions = [
     ],
   },
   {
-    question: "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
+    question:
+      "Which famous Portuguese poet is commemorated with a statue in Setúbal?",
     answers: [
       { text: "Manuel Maria Barbosa du Bocage", correct: true },
       { text: "Luís de Camões", correct: false },
@@ -139,7 +140,8 @@ const questions = [
     ],
   },
   {
-    question: "Which historical building in Setúbal was once a Jesuit monastery?",
+    question:
+      "Which historical building in Setúbal was once a Jesuit monastery?",
     answers: [
       { text: "Convento de Jesus", correct: true },
       { text: "Convento de São Francisco", correct: false },
@@ -166,7 +168,8 @@ const questions = [
     ],
   },
   {
-    question: "Which unique flora is commonly found in the Arrábida Natural Park?",
+    question:
+      "Which unique flora is commonly found in the Arrábida Natural Park?",
     answers: [
       { text: "Pine trees", correct: false },
       { text: "Cork oaks", correct: false },
@@ -193,7 +196,8 @@ const questions = [
     ],
   },
   {
-    question: "Which popular outdoor activity is common in the Arrábida mountains?",
+    question:
+      "Which popular outdoor activity is common in the Arrábida mountains?",
     answers: [
       { text: "Surfing", correct: false },
       { text: "Rock climbing", correct: true },
@@ -202,7 +206,8 @@ const questions = [
     ],
   },
   {
-    question: "Which beach is renowned for its clear waters and is located in Arrábida?",
+    question:
+      "Which beach is renowned for its clear waters and is located in Arrábida?",
     answers: [
       { text: "Praia da Rocha", correct: false },
       { text: "Praia da Figueirinha", correct: true },
@@ -229,7 +234,8 @@ const questions = [
     ],
   },
   {
-    question: "Which beach is known for its secluded and tranquil environment in Arrábida?",
+    question:
+      "Which beach is known for its secluded and tranquil environment in Arrábida?",
     answers: [
       { text: "Praia da Comporta", correct: false },
       { text: "Praia de Albarquel", correct: true },
@@ -238,7 +244,8 @@ const questions = [
     ],
   },
   {
-    question: "Which beach is part of the Arrábida Natural Park and has limited access?",
+    question:
+      "Which beach is part of the Arrábida Natural Park and has limited access?",
     answers: [
       { text: "Praia da Rocha", correct: false },
       { text: "Praia do Portinho da Arrábida", correct: true },
@@ -262,14 +269,16 @@ const questions = [
     ],
   },
   {
-    question: "Is Queijo de Azeitão a soft, creamy cheese made from cow's milk?",
+    question:
+      "Is Queijo de Azeitão a soft, creamy cheese made from cow's milk?",
     answers: [
       { text: "False", correct: true },
       { text: "True", correct: false },
     ],
   },
   {
-    question: "Is Moscatel de Setúbal a sweet, fortified wine made from Muscat grapes?",
+    question:
+      "Is Moscatel de Setúbal a sweet, fortified wine made from Muscat grapes?",
     answers: [
       { text: "True", correct: true },
       { text: "False", correct: false },
