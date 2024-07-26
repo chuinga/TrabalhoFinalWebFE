@@ -198,6 +198,7 @@ audio {
   z-index: 0;
 }
 
+/* Quiz game styles */
 /* Flexbox layout for elements with the class 'jogo' */
 .jogo {
   width: 100%;
@@ -226,6 +227,7 @@ audio {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  padding: 2px;
 }
 
 .respostas-container {
@@ -278,11 +280,11 @@ audio {
   display: none;
 }
 
-.correto {
+button.correto {
   color: #09f56f;
 }
 
-.incorreto {
+button.incorreto {
   color: #f81010;
 }
 
@@ -320,7 +322,7 @@ button {
   font-style: normal;
 }
 
-/* Styling for table elements */
+/* Gastronomy table styles */
 table {
   width: 100%;
   border-collapse: collapse;
