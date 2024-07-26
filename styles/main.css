@@ -285,6 +285,8 @@ button {
 
 #fundoperguntas {
   background-image: url("/assets/images/questions.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 500px;
   margin-bottom: 80px;
