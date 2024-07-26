@@ -31,15 +31,15 @@ function displayNextQuestion() {
 
   $questionText.textContent = questions[currentQuestionIndex].pergunta;
   questions[currentQuestionIndex].respostas.forEach((answer) => {
-    const newAsnwer = document.createElement("button");
-    newAsnwer.classList.add("button", "resposta");
-    newAsnwer.textContent = answer.text;
+    const newAnswer = document.createElement("button");
+    newAnswer.classList.add("button", "resposta");
+    newAnswer.textContent = answer.text;
     if (answer.correto) {
-      newAsnwer.dataset.correto = answer.correto;
+      newAnswer.dataset.correto = answer.correto;
     }
-    $answersContainer.appendChild(newAsnwer);
+    $answersContainer.appendChild(newAnswer);
 
-    newAsnwer.addEventListener("click", selectAnswer);
+    newAnswer.addEventListener("click", selectAnswer);
   });
 }
 
@@ -138,7 +138,7 @@ function finishGame() {
 } */
 
 // Questions array containing the quiz questions and answers
-const perguntas = [
+const questions = [
   // Multiple-choice questions
   {
     pergunta: "What is the main square of Setúbal called?",

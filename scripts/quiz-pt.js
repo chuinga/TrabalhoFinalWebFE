@@ -108,9 +108,9 @@ function finishGame() {
     </button>`;
 }
 
-// Array de perguntas contendo as perguntas e respostas do quiz
-const perguntas = [
-  // Perguntas de escolha múltipla
+// Questions array containing the quiz questions and answers
+const questions = [
+  // Multiple-choice questions
   {
     pergunta: "Como se chama a praça principal de Setúbal?",
     respostas: [
