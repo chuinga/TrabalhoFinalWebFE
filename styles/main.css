@@ -189,7 +189,6 @@ audio {
 
 /* Flexbox layout for elements with the class 'jogo' */
 .jogo {
-  /*background-color: #38444d;*/
   width: 100%;
   min-width: 330px;
   padding: 16px;
@@ -210,6 +209,8 @@ audio {
 }
 
 .pergunta {
+  background-color: #86b0e2;
+  border: 2px solid #b25055;
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
@@ -236,7 +237,8 @@ audio {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  border: 0;
+  border: 2px solid #b25055;
+  border-radius: 40%;
   height: 50px;
   padding: 0 40px;
   transition: filter 0.1s;
