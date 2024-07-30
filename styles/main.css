@@ -372,3 +372,23 @@ td {
 li {
   font-size: 15pt;
 }
+
+/* Until 768px */
+@media (max-width: 768px) {
+  /* Your CSS styles for small screens */
+}
+
+/* Between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Your CSS styles for medium screens */
+}
+
+/* Between 1024px and 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* Your CSS styles for large screens */
+}
+
+/* Bigger than 1440px */
+@media (min-width: 1440px) {
+  /* Your CSS styles for extra large screens */
+}
